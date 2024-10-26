@@ -1,0 +1,130 @@
+.card {
+    padding: 50px 20px 20px 20px;
+    margin-left: 60px;
+    position: fixed;
+}
+
+.input-group-text {
+    background-color: #404040;
+    color: white;
+    font-weight: bold;
+}
+
+.card-title {
+    text-align: center;
+    color: #940e0e;
+    font-size: 29px;
+    font-weight: bold;
+
+}
+
+
+input.balance {
+    border: none;
+    border-bottom: 1px solid #d3d0d0;
+    border-radius: 0;
+    outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.sendBtn {
+    background-color: #0a48b9;
+    color: white;
+    font-weight: bold;
+    margin-left: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.cancelBtn {
+    background-color: #940e0e;
+    color: white;
+    font-weight: bold;
+    margin-left: 200px;
+}
+
+
+.staticText {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    white-space: nowrap;
+    padding-top: 20px;
+    color: #940e0e;
+    width: 0;
+    padding-left: 20px;
+}
+
+
+.chart {
+    margin-top: 50px !important;
+}
+
+.transaction-table {
+    margin-left: 500px !important;
+    margin-top: 50px !important;
+}
+
+th {
+    color: #aaa8a8 !important;
+}
+
+.charts {
+    margin-left: 10px !important;
+}
+
+.ether-chart,
+.tron-chart {
+    margin-left: 250px;
+}
+
+.usdt-chart,
+.tron-chart {
+    margin-top: 210px !important;
+}
+
+.bit-chart,
+.usdt-chart {
+    margin-left: 30px !important;
+}
+
+.transaction-table .table {
+    padding-top: -20px !important;
+}
+
+#bit-chart,
+#ether-chart {
+    position: fixed;
+    height: 100px !important;
+}
+
+.btc {
+    margin-top: -35px !important;
+    display: flex;
+}
+
+.charts p {
+    font-size: 11px;
+    color: grey;
+}
+
+#weekly-rates {
+    margin-left: 15px;
+}
+
+#week-rates {
+    margin-left: 50px;
+}
+
+#week-rate,
+#week-rated {
+    margin-left: 70px;
+}

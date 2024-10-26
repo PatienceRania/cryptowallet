@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Crypto Wallet</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="side-bar ">
+                <div class="logo">
+                    <img src="images/wallet.webp" style="width: 80px; height: 80px;">
+                    <h1>CryptoWallet</h1>
+                </div>
+                <div>
+                    <div class=" activities account" style="padding-top: 50px;">
+                        <img src="images/account.webp">
+                        <p style="font-size: 17px;">Account</p>
+                    </div>
+                    <div class=" activities send">
+                        <img src="images/send.png">
+                        <p style="font-size: 17px;">Send </p>
+                    </div>
+                    <div class=" activities receive">
+                        <img src="images/receive.png">
+                        <p style="font-size: 17px;">Receive </p>
+                    </div>
+                    <div class=" activities buy">
+                        <img src="images/buy.png">
+                        <p style="font-size: 17px;">Buy coin</p>
+                    </div>
+                    <div class=" activities">
+                        <img src="images/settings.png">
+                        <p style="font-size: 17px;">Settings </p>
+                    </div>
+                    <div class=" activities transaction">
+                        <img src="images/transaction.svg">
+                        <p style="font-size: 17px;">Transaction Log</p>
+        
+                    </div>
+                </div>
+
+            </div>
+            <div class="main" id="mainContent">
+                <div class="Tenant">
+                    <img src="images/exchange.webp" style="width: 80px;">
+                    <div class="typed-text"></div>
+
+                </div>
+                <div class="tabs">
+                    <div class="tab active"> Summary</div>
+                    <div class="tab bitcoin" onclick="showBitcoin(event)">Bitcoin <img src="images/bitcoin.png"></div>
+                    <div class="tab ethereum" onclick="showEthereum(event)">Ethereum <img src="images/etherum.png"
+                            alt="">
+                    </div>
+                    <div class="tab tron" onclick="showTron(event)"> Tron <img src="images/tron.png"></div>
+                    <div class="tab uSDT " onclick="showUSDT(event)"> USDT <img src="images/usdt.png" alt=""></div>
+                </div>
+
+                <div class="wallet-info">
+                    <div class="wallet-summary">
+                        <div class=" activities">
+                            <h2>Crypto-Wallet balance:</h2> <a href=""> View Wallet</a>
+
+                        </div>
+                        <hr>
+                        <div id="Bitcoin" style="display: block;">
+                            <p>Bitcoin Balance (USD)</p>
+                            <p class="balance">20,000,000.00</p>
+                            <p>Balance (UGX)</p>
+                            <p class="balances">20,000,000.00</p>
+                        </div>
+                        <div id="Ethereum" style="display: none;">
+                            <p>Ethereum Balance (USD)</p>
+                            <p class="bal">20,000,000.00</p>
+                            <p>Balance (UGX)</p>
+                            <p class="bals">20,000,000.00</p>
+                        </div>
+                        <div id="Tron" style="display: none;">
+                            <p>Tron Balance (USD)</p>
+                            <p class="balance">20,000,000.00</p>
+                            <p>Balance (UGX)</p>
+                            <p class="balance">20,000,000.00</p>
+                        </div>
+                        <div id="USDT" style="display: none;">
+                            <p>USDT Balance (USD)</p>
+                            <p class="balance">20,000,000.00</p>
+                            <p>Balance (UGX)</p>
+                            <p class="balance">20,000,000.00</p>
+                        </div>
+                    </div>
+                    <div class="wallet-details">
+                        <div class="activities">
+                            <h2>Recent Transactions</h2> <a href=""> View Wallet</a>
+
+                        </div>
+                        <hr>
+                        <p>Transaction 1</p>
+                        <p class="balance">0.00</p>
+                        <p>Transaction 2</p>
+                        <p class="balance">0.00</p>
+
+                    </div>
+                </div>
+                <div class="title">
+                    <h3> Account Information </h3>
+                </div>
+                <div class="tenant-info">
+                    <div>
+                        <p class="top">Account Name</p>
+                        Nakasero Market SACCO
+                    </div>
+                    <div>
+                        <p class="top">Country/City</p>
+                        Uganda/Kampala
+                    </div>
+
+                    <div>
+                        <p class="top">Account Number</p>
+                        12675879370663
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="javascript/scripts.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>

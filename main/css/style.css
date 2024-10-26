@@ -1,0 +1,1057 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    overflow: hidden;
+}
+
+.side-bar {
+    background-color: #404040;
+    position: relative;
+    top: 0;
+
+    svg {
+        width: 200px;
+        height: 90px;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+    color: white;
+    font-weight: bold;
+    height: 150vh;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-top: 10px;
+
+    p {
+        padding-left: 10px;
+
+    }
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 22rem 1fr;
+    padding: 0 !important;
+    margin: 0 !important;
+
+}
+
+.activities {
+    display: flex;
+    padding-top: 25px;
+    cursor: pointer;
+
+    /* font-size: 17px; */
+}
+
+.activities img {
+    width: 30px;
+    height: 30px;
+}
+
+.main {
+    height: 150vh;
+
+    background-color: #ddd;
+}
+
+.logo {
+    display: flex;
+    margin-bottom: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    padding-top: 32px;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#wallet-details {
+    display: flex;
+    align-items: center;
+}
+
+.notification {
+    background: #81bd5e;
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.wallet-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    border-top: 2px solid #0a48b9;
+}
+
+.tabs {
+    display: flex;
+
+    margin-left: 20px;
+    margin-top: 25px;
+
+}
+
+.tab {
+    background: #404040;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 8px 10px;
+    margin-right: 30px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.tab img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.tab.active {
+    background-color: #0a48b9;
+    color: white !important;
+}
+
+.Tenant {
+    background: whitesmoke;
+    min-height: 15vh;
+    width: 1010px;
+    padding-top: 5px;
+    padding-left: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    display: flex;
+}
+
+.typed-text {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-top: 20px;
+    color: #940e0e;
+    width: 0;
+    padding-left: 20px;
+    animation: typing 6s steps(50, end) forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
+.balance,
+.balances,
+.bal,
+.bals {
+    font-size: 1.5em !important;
+    /* margin-top: 5px; */
+    font-weight: bold;
+    color: #404040 !important;
+}
+
+.wallet-summary {
+    background: white;
+    width: 450px;
+    padding-left: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    padding-bottom: 20px;
+
+    a {
+        margin-left: 90px;
+        padding-bottom: 8px;
+        font-weight: 300;
+    }
+
+    p {
+        /* padding-top: 10px; */
+        color: gray;
+        font-size: 13px;
+    }
+
+    .activities {
+        font-weight: bold;
+        color: gray;
+        padding-top: 10px !important;
+    }
+
+}
+
+.wallet-details {
+    background: white;
+    width: 450px !important;
+    padding-left: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-right: 20px !important;
+
+    a {
+        margin-left: 200px;
+        padding-bottom: 8px;
+        font-weight: 300;
+    }
+
+    p {
+        /* padding-top: 8px; */
+        color: gray;
+        font-size: 13px;
+    }
+
+    .activities {
+        font-weight: bold;
+        color: gray;
+        padding-top: 10px !important;
+    }
+
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-bottom: 10px;
+
+}
+
+.circle {
+    position: relative;
+    float: right;
+
+}
+
+
+body {
+    background-color: #ddd;
+}
+
+.tenant-info {
+    background-color: #fff;
+    padding-left: 20px;
+    color: grey;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    width: 970px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 150px;
+    font-size: 13px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.title {
+    background-color: #0a48b9;
+    margin-top: 40px;
+    color: white;
+    width: 970px;
+    padding-left: 20px;
+    margin-left: 20px;
+    height: 6vh;
+    padding-top: 5px;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.top {
+    font-size: 12px;
+    color: grey;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 190px;
+    margin-right: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+
+    img {
+        width: 18px;
+        height: 18px;
+        padding-top: 5px;
+    }
+
+    display: flex;
+}
+
+.back {
+    background: #404040;
+    color: white;
+    font-weight: bold;
+    height: 38px;
+    width: 110px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.edit {
+    background: #69a707;
+    color: white;
+    font-weight: bold;
+    height: 38px;
+    width: 110px;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+/* .active-activity {
+    background-color: #e6e6e64b;
+    margin-top: 10px;
+    padding-bottom: 13px;
+    padding-top: 13px;
+} */
+
+
+
+.notch {
+    position: absolute;
+    left: 17%;
+    top: 10%;
+    transform: translateY(-2%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #ddd;
+    content: '';
+}
+
+.bar-container {
+    position: relative;
+    background-color: e6e6e64b;
+    width: 150px;
+    height: 20px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .container {
+        display: flex;
+        overflow-x: hidden;
+        width: auto;
+        height: auto;
+    }
+
+    .side-bar {
+        grid-column: 1 / span 1;
+        height: auto;
+        padding-bottom: 20px;
+        width: auto;
+    }
+
+    .main {
+        grid-column: 1 / span 1;
+        padding: 20px;
+    }
+
+
+    .activities {
+        display: flex;
+        padding-top: 25px;
+    }
+
+    .main {
+        height: auto;
+        min-height: 100vh;
+        background-color: #ddd;
+    }
+
+    .side-bar {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .logo {
+        font-size: 1em;
+        margin-bottom: 0;
+    }
+
+    #wallet-details {
+        display: flex;
+        display: grid;
+        align-items: center;
+    }
+
+    .notification {
+        background: #81bd5e;
+        width: 20px;
+        height: 20px;
+        margin-left: 20px;
+        font-size: 13px;
+        text-align: center;
+        border-radius: 50%;
+    }
+
+    .wallet-info {
+        display: grid;
+        margin-left: 5px;
+        margin-right: 20px;
+
+        border-top: 2px solid #c2e6a5;
+    }
+
+    .tabs {
+        display: flex;
+
+        margin-left: 2px;
+        margin-top: 25px;
+
+    }
+
+    .tab {
+        background: #404040;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 10px;
+        margin-right: 8px;
+        cursor: pointer;
+        font-size: 8px;
+        width: auto;
+        color: white;
+
+    }
+
+    .tab.active {
+        background-color: #c2e6a5;
+        color: black !important;
+    }
+
+    .Tenant {
+        background: whitesmoke;
+        padding-top: 15px;
+        /* padding-left: 20px; */
+        font-weight: bold;
+        box-shadow: 0 4px 8px #0000001a;
+        justify-content: start;
+        margin: 0 !important;
+        min-height: 5vh;
+        width: 100%;
+        margin-bottom: 20px !important;
+    }
+
+
+    .balance {
+        font-size: 1em !important;
+        /* margin-top: 5px; */
+        font-weight: bold;
+        color: #404040 !important;
+    }
+
+    .wallet-summary {
+        background: white;
+        width: 450px;
+        padding-left: 10px;
+        border-radius: 3px;
+        font-size: 10px;
+        padding-bottom: 20px;
+
+        a {
+            margin-left: 100px;
+            padding-bottom: 8px;
+            font-weight: 300;
+        }
+
+        p {
+            /* padding-top: 10px; */
+            color: gray;
+            font-size: 10px;
+        }
+
+        .activities {
+            font-weight: bold;
+            color: gray;
+            padding-top: 8px !important;
+        }
+
+    }
+
+    .wallet-details {
+        background: white;
+        width: 450px !important;
+        padding-left: 10px;
+        font-size: 10px;
+        border-radius: 5px;
+        margin-left: 0 !important;
+        margin-top: 20px;
+
+        a {
+            margin-left: 200px;
+            padding-bottom: 8px;
+            font-weight: 300;
+        }
+
+        p {
+            /* padding-top: 8px; */
+            color: gray;
+            font-size: 10px;
+        }
+
+        .activities {
+            font-weight: bold;
+            color: gray;
+            padding-top: 10px !important;
+        }
+
+    }
+
+    hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin-bottom: 10px;
+
+    }
+
+    .circle {
+        position: relative;
+        float: right;
+
+    }
+
+    .circle::after {
+        height: 28px;
+        width: 28px;
+        position: absolute;
+        content: '';
+        background-color: #ddd;
+        font-size: 3em;
+        border-radius: 50%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        /* margin:;  */
+
+
+    }
+
+    body {
+        background-color: #ddd;
+    }
+
+    .tenant-info {
+        background-color: #fff;
+        padding-left: 20px;
+        color: grey;
+        margin-left: 8px;
+        border: 1px solid #ccc;
+        width: 450px;
+        display: grid;
+        justify-content: space-between;
+        padding-right: 150px;
+        font-size: 13px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .title {
+        background-color: #404040;
+        margin-top: 40px;
+        color: white;
+        width: 450px;
+        padding-left: 20px;
+        margin-left: 8px;
+        height: 3vh;
+        padding-top: 5px;
+        font-weight: bold;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .top {
+        font-size: 12px;
+        color: grey;
+        font-weight: bold;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: start;
+        margin-top: 50px;
+        margin-right: 20px;
+    }
+
+    button {
+        padding: 10px;
+        /* margin-left: 10px; */
+        cursor: pointer;
+        border: none;
+        border-radius: 3px;
+
+        img {
+            width: 10px;
+            height: 10px;
+            padding-top: 2px;
+        }
+
+        display: flex;
+    }
+
+    .back {
+        background: #404040;
+        color: white;
+        font-weight: bold;
+        height: 30px;
+        width: 80px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .edit {
+        background: #69a707;
+        color: white;
+        font-weight: bold;
+        height: 30px;
+        width: 80px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+
+    .active-activity {
+        background-color: #e6e6e64b;
+        margin-top: 10px;
+        padding-bottom: 13px;
+        padding-top: 13px;
+    }
+
+
+    .notch {
+        position: absolute;
+        left: 0;
+        top: 10%;
+        transform: translateY(-2%);
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid #ddd;
+        content: '';
+    }
+
+    .bar-container {
+        position: relative;
+        background-color: e6e6e64b;
+        width: 150px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .side-bar {
+        padding: 20px;
+    }
+
+    .main {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+
+    .side-bar {
+        background-color: #404040;
+
+        svg {
+            width: 80px;
+            height: 50px;
+        }
+
+        img {
+            width: 15px;
+            height: 15px;
+        }
+
+        color: white;
+        margin-top: 200px;
+        font-weight: bold;
+        height: 150vh;
+        width:30% !important;
+        font-size: 12px;
+        padding-left: 10px;
+
+        padding-top: 15;
+
+        p {
+            padding-left: 5px;
+
+        }
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: flex;
+        grid-template-columns: 30% 70%;
+        padding: 0 !important;
+        margin: 0 !important;
+
+    }
+
+    .activities {
+        display: flex;
+        padding-top: 25px;
+    }
+
+    .main {
+        height: 50vh;
+        padding-top: 0 !important;
+        background-color: #ddd;
+    }
+
+    .logo {
+        font-size: 8px;
+        margin-bottom: 0;
+    }
+
+    #wallet-details {
+        display: grid;
+        align-items: center;
+    }
+
+    .notification {
+        background: #81bd5e;
+        width: 20px;
+        height: 20px;
+        margin-left: 20px;
+        font-size: 12px;
+        text-align: center;
+        border-radius: 50%;
+    }
+
+    .wallet-info {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-top: 2px solid #c2e6a5;
+        /* width: 49%; */
+    }
+
+    .tabs {
+        display: flex;
+        margin-left: 10px;
+        margin-top: 12px;
+
+    }
+
+    .tab {
+        background: #404040;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 5px 10px;
+        margin-right: 10px;
+        cursor: pointer;
+        color: white;
+        font-size: 5px;
+        width: auto;
+        height: 25px;
+
+    }
+
+    .tab.active {
+        background-color: #c2e6a5;
+        color: black !important;
+
+    }
+
+    .balance {
+        font-size: 1em !important;
+        /* margin-top: 5px; */
+        font-weight: bold;
+        color: #404040 !important;
+    }
+
+
+    .Tenant {
+        background: whitesmoke;
+        padding-top: 15px;
+        padding-left: 20px;
+        font-weight: bold;
+        box-shadow: 0 4px 8px #0000001a;
+        justify-content: start;
+        margin: 0 !important;
+        min-height: 6vh;
+        margin-bottom: 20px !important;
+    }
+
+    .wallet-summary {
+        background: white;
+        width: 100%;
+        padding-left: 5px;
+        border-radius: 3px;
+        font-size: 10px;
+        padding-bottom: 20px;
+
+        a {
+            margin-left: 90px;
+            padding-bottom: 4px;
+            font-weight: 300;
+        }
+
+        p {
+            /* padding-top: 10px; */
+            color: gray;
+            font-size: 10px;
+        }
+
+        .activities {
+            font-weight: bold;
+            color: gray;
+            padding-top: 5px !important;
+        }
+
+    }
+
+    .wallet-details {
+        background: white;
+        width: 100%;
+        padding-left: 5px;
+        /* margin-right: 58px; */
+        margin-top: 20px;
+        border-radius: 3px;
+        font-size: 10px;
+        padding-bottom: 20px;
+
+        a {
+            margin-left: 90px;
+            padding-bottom: 8px;
+            font-weight: 300;
+        }
+
+        p {
+            /* padding-top: 8px; */
+            color: gray;
+            font-size: 8px;
+        }
+
+        .activities {
+            font-weight: bold;
+            color: gray;
+            padding-top: 5px !important;
+        }
+
+    }
+
+    hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin-bottom: 10px;
+
+    }
+
+    .circle {
+        position: relative;
+        float: right;
+
+    }
+
+    .circle::after {
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        content: '';
+        background-color: #ddd;
+        font-size: 3em;
+        border-radius: 50%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin-right: 20px;
+
+
+    }
+
+    body {
+        background-color: #ddd;
+        overflow-x: hidden;
+    }
+
+    .tenant-info {
+        background-color: #fff;
+        padding-left: 20px;
+        color: grey;
+        border: 1px solid #ccc;
+        width: 95%;
+        display: grid;
+        padding-right: 150px;
+        font-size: 10px;
+        padding-top: 1px;
+        padding-bottom: 15px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin: 0 auto;
+
+        p {
+            padding-top: 10px;
+        }
+    }
+
+    .title {
+        background-color: #404040;
+        margin: 0 auto;
+        margin-top: 20px;
+        height: 40px;
+        color: white;
+        width: 95%;
+        padding-left: 20px;
+        font-weight: bold;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .top {
+        font-size: 12px;
+        color: grey;
+        font-weight: bold;
+
+    }
+
+    .buttons {
+        display: flex;
+        margin-top: 100px;
+        margin-right: 20px;
+        justify-content: flex-start;
+    }
+
+    button {
+        padding: 10px 20px;
+
+        cursor: pointer;
+        border: none;
+        border-radius: 3px;
+
+        img {
+            width: 8px;
+            height: 8px;
+            padding-top: 3px;
+        }
+
+        display: flex;
+    }
+
+    .back {
+        background: #404040;
+        color: white;
+        font-weight: bold;
+        height: 30px;
+        width: 80px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .edit {
+        background: #69a707;
+        color: white;
+        font-weight: bold;
+        height: 30px;
+        width: 70px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+
+    .active-activity {
+        background-color: #e6e6e64b;
+        margin-top: 8px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+
+    .notch {
+        position: absolute;
+        left: 19%;
+        top: 10%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid #ddd;
+        content: '';
+    }
+
+    .bar-container {
+        position: relative;
+        background-color: e6e6e64b;
+        width: 150px;
+        height: 10px;
+    }
+
+    .side-bar {
+        display: none;
+    }
+
+    .main,
+    .Tenant {
+        width: 100%;
+    }
+
+}

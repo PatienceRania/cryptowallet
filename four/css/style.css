@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    position: relative;
+}
+
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+
+}
+
+.title {
+    color: rgb(10, 72, 185);
+}
+
+.user-name {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.user-name img {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    padding-top: 5px;
+    transform: translateY(-10%);
+    border-right: 2px solid #ccc;
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+.User-name,
+.pass-word {
+    width: 300px;
+    min-height: 42px;
+    color: grey;
+    font-size: 0.94em;
+    padding: 1px;
+    border-radius: 15px;
+    padding-left: 52px;
+    border: 1px solid #ccc;
+    border-bottom: 2.5px solid #ccc;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4) inset;
+}
+
+
+.pass-word {
+    border-bottom: 2.5px solid #ccc;
+    border-top: none;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25) inset;
+}
+
+.password {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.password img {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    height: 20px;
+    width: 20px;
+    padding-top: 7px;
+    transform: translateY(-10%);
+    margin-top: 4px;
+    padding-left: 10px;
+    transform: rotate(180deg);
+    border-left: 2px solid #ccc;
+    padding-right: 5px;
+}
+
+.btn-1 {
+    min-width: 350px;
+    min-height: 40px;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 15px;
+    margin-top: 30px;
+    padding-left: 20px;
+    color: white;
+    background: rgb(10, 72, 185);
+    border: none;
+    cursor: pointer;
+
+}
+
+.icon img {
+    position: absolute;
+    left: 85%;
+    width: 20px;
+    height: 10px !important;
+    transform: translateY(-10%);
+    border: none;
+    padding-top: 6px;
+    float: right;
+    right: 0;
+    padding-top: 13px;
+    margin-top: 2px !important;
+
+
+}
+
+.btn-2 {
+    min-width: 90px;
+    min-height: 40px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 20px;
+    margin-top: 90px;
+    color: white;
+    background: rgb(10, 72, 185);
+    border: none;
+    margin-left: 200px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 8px;
+
+
+}
+
+.login-form p {
+    padding: 20px;
+    font-size: 14px;
+}
+
+.user-name label {
+    padding-bottom: 5px;
+}
+
+.password label {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+
+.btn-2 img {
+    width: 20px;
+
+    height: 15px;
+}
+
+p,
+label {
+    font-size: 15px;
+}
+
+p a {
+    font-size: 13px;
+    color: blue;
+}
+
+@media screen and (max-width: 1024px) {
+    * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        overflow-y: hidden !important;
+        height: 525px;
+    }
+
+    .container {
+        display: flex;
+        position: relative;
+        height: 525px;
+
+    }
+
+    .side-image img {
+        width: 350px;
+        height: 525px;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 60px;
+
+    }
+
+    .title {
+        color: blue;
+    }
+
+    .user-name {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .user-name img {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        padding-top: 5px;
+        transform: translateY(-10%);
+        border-right: 2px solid #ccc;
+        padding-right: 10px;
+        padding-left: 5px;
+    }
+
+    .User-name,
+    .pass-word {
+        width: 300px;
+        min-height: 42px;
+        color: grey;
+        font-size: 0.94em;
+        padding: 1px;
+        border-radius: 15px;
+        padding-left: 52px;
+        border: 1px solid #ccc;
+        border-bottom: 2.5px solid #ccc;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4) inset;
+    }
+
+
+    .pass-word {
+        border-bottom: 2.5px solid #ccc;
+        border-top: none;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25) inset;
+    }
+
+    .password {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .password img {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        height: 20px;
+        width: 20px;
+        padding-top: 7px;
+        transform: translateY(-10%);
+        margin-top: 4px;
+        padding-left: 10px;
+        transform: rotate(180deg);
+        border-left: 2px solid #ccc;
+        padding-right: 5px;
+    }
+
+    .btn-1 {
+        min-width: 350px;
+        min-height: 40px;
+        font-weight: bold;
+        font-size: 1em;
+        border-radius: 15px;
+        margin-top: 30px;
+        padding-left: 20px;
+        color: white;
+        background: rgb(10, 72, 185);
+        border: none;
+        cursor: pointer;
+
+    }
+
+    .icon img {
+        position: absolute;
+        left: 85%;
+        width: 20px;
+        height: 10px !important;
+        transform: translateY(-10%);
+        border: none;
+        padding-top: 6px;
+        float: right;
+        right: 0;
+        padding-top: 13px;
+        margin-top: 2px !important;
+
+
+    }
+
+    .btn-2 {
+        min-width: 90px;
+        min-height: 40px;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 20px;
+        margin-top: 90px;
+        color: white;
+        background: rgb(10, 72, 185);
+        border: none;
+        margin-left: 200px;
+        cursor: pointer;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 8px;
+
+
+    }
+
+    .login-form p {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .user-name label {
+        padding-bottom: 5px;
+    }
+
+    .password label {
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+
+
+    .btn-2 img {
+        width: 20px;
+
+        height: 15px;
+    }
+
+    p,
+    label {
+        font-size: 15px;
+    }
+
+    p a {
+        font-size: 13px;
+        color: blue;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        overflow-y: hidden !important;
+        height: 525px;
+    }
+
+    .container {
+        display: flex;
+        position: relative;
+        height: 525px;
+        scroll-behavior: none;
+        box-sizing: border-box;
+
+    }
+
+    .side-image img {
+        display: none;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30px;
+
+    }
+
+    .title {
+        color: blue;
+
+    }
+
+    .user-name {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .user-name img {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        padding-top: 5px;
+        transform: translateY(-10%);
+        border-right: 2px solid #ccc;
+        padding-right: 10px;
+        padding-left: 5px;
+    }
+
+    .User-name,
+    .pass-word {
+        width: 300px;
+        min-height: 42px;
+        color: grey;
+        font-size: 0.94em;
+        padding: 1px;
+        border-radius: 15px;
+        padding-left: 52px;
+        border: 1px solid #ccc;
+        border-bottom: 2.5px solid #ccc;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4) inset;
+    }
+
+
+    .pass-word {
+        border-bottom: 2.5px solid #ccc;
+        border-top: none;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25) inset;
+    }
+
+    .password {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .password img {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        height: 20px;
+        width: 20px;
+        padding-top: 7px;
+        transform: translateY(-10%);
+        margin-top: 4px;
+        padding-left: 10px;
+        transform: rotate(180deg);
+        border-left: 2px solid #ccc;
+        padding-right: 5px;
+    }
+
+    .btn-1 {
+        min-width: 350px;
+        min-height: 40px;
+        font-weight: bold;
+        font-size: 1em;
+        border-radius: 15px;
+        margin-top: 30px;
+        padding-left: 20px;
+        color: white;
+        background: rgb(10, 72, 185);
+        border: none;
+        cursor: pointer;
+
+    }
+
+    .icon img {
+        position: absolute;
+        left: 85%;
+        width: 20px;
+        height: 10px !important;
+        transform: translateY(-10%);
+        border: none;
+        padding-top: 6px;
+        float: right;
+        right: 0;
+        padding-top: 13px;
+        margin-top: 2px !important;
+
+
+    }
+
+    .btn-2 {
+        min-width: 90px;
+        min-height: 40px;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 20px;
+        margin-top: 90px;
+        color: white;
+        background: rgb(10, 72, 185);
+        border: none;
+        margin-left: 200px;
+        cursor: pointer;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 8px;
+
+
+    }
+
+    .login-form p {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .user-name label {
+        padding-bottom: 5px;
+    }
+
+    .password label {
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+
+
+    .btn-2 img {
+        width: 20px;
+
+        height: 15px;
+    }
+
+    p,
+    label {
+        font-size: 15px;
+    }
+
+    p a {
+        font-size: 13px;
+        color: blue;
+    }
+}
