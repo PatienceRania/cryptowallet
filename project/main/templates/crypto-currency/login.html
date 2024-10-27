@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
+    <title>{% block title %} Login | Crypto Wallet {% endblock title %}</title>
     <link
       rel="stylesheet"
       href="{% static 'crypto-currency/css/login.css' %}"
@@ -18,9 +18,10 @@
       </div>
       <div class="login-form">
         <div class="title">
-          <h1>Login</h1>
+          <h1>{% block formtitle %} Login {% endblock formtitle %}</h1>
         </div>
 
+        {% block form %}
         <form method="post">
           {% csrf_token %}
           <div>
@@ -58,13 +59,15 @@
             <button type="submit" class="btn-1">Login</button>
           </div>
         </form>
-
-        {% if messages %} {% for message in messages %}
-
+        {% endblock form %} {% if messages %} {% for message in messages %}
         <p>{{message}}</p>
-
         {% endfor %} {% endif %}
-        <p>Do you have an account? <a href="">register</a></p>
+        <p>
+          {% block loginpara %} Do you have an account?
+          <a href="{% url 'register' %}">register</a>
+          {% endblock loginpara %}
+        </p>
+
         <div class="btn-2div">
           <button type="submit" class="btn-2">
             <img src="{% static 'crypto-currency/images/back.png' %}" />Back
