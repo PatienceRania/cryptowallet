@@ -20,33 +20,42 @@
                     <h1>Login </h1>
                 </div>
 
-                <form>
+                <form method="post">
+                    {% csrf_token %}
                     <div>
                         <div class="user-name">
                             <label for="User Name ">User Name</label>
                             <span>
                                 <img src="{% static 'crypto-currency/images/email.png' %}">
                             </span>
-                            <input type="email" class="User-name" placeholder="Enter Your User name">
+                            <input type="text" id="username" name="username" class="User-name" placeholder="Enter Your username">
                         </div>
                         <div class="password">
                             <label for="password ">Password</label>
                             <span class="icon-1">
                                 <img src="{% static 'crypto-currency/images/key.png' %}">
                             </span>
-                            <input type="password" class="pass-word" placeholder=" Enter Your Password">
+                            <input type="password" id="password" name="password" class="pass-word" placeholder=" Enter Your Password">
                             <span class="icon">
                                 <img src="{% static 'crypto-currency/images/eye.png' %}">
                             </span>
                         </div>
                     </div>
                     <div>
-                        <button class="btn-1">Login</button>
+                        <button type="submit" class="btn-1">Login</button>
                     </div>
                 </form>
-                <p>Did you have an account? <a href="">register</a> </p>
+
+                {% if messages %}
+                {% for message in messages %}
+                
+                <p> {{message}} </p>
+
+                {% endfor %}
+                {% endif %}
+                <p>Do you have an account? <a href="">register</a> </p>
                 <div>
-                    <button class="btn-2"><img src="{% static 'crypto-currency/images/back.png' %}">Back</button>
+                    <button type="submit" class="btn-2"><img src="{% static 'crypto-currency/images/back.png' %}">Back</button>
                 </div>
             </div>
         </div>
