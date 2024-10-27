@@ -71,6 +71,7 @@ input[type="number"] {
 .transaction-table {
     margin-left: 500px !important;
     margin-top: 50px !important;
+    padding-top: -20px !important;
 }
 
 th {
@@ -96,9 +97,6 @@ th {
     margin-left: 30px !important;
 }
 
-.transaction-table .table {
-    padding-top: -20px !important;
-}
 
 #bit-chart,
 #ether-chart {
@@ -112,7 +110,7 @@ th {
 }
 
 .charts p {
-    font-size: 11px;
+    font-size: 11px !important;
     color: grey;
 }
 

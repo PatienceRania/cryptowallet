@@ -12,12 +12,6 @@ function typeWriter() {
 
 window.onload = typeWriter;
 
-document.querySelector('.account').addEventListener('click', function () {
-    window.location.href = 'index.html';
-});
-
-
-
 document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', function () {
 
@@ -69,10 +63,12 @@ document.querySelector('.bitcoin').addEventListener('click', function () {
 });
 
 document.querySelector('.send').addEventListener('click', function () {
+    loadBootstrap();
+    loadSendStyles();
     const tenantContent = document.querySelector('.Tenant').outerHTML;
     document.getElementById('mainContent').innerHTML = `
      <div class="Tenant">
-                    <img src="{% static 'crypto-currency/images/exchange.webp' %}" style="width: 80px;">
+                    <img src="{% static 'crypto-currency/images/exchange.webp' %}" style="width: 80px;" id="exchangeImage">
                     <div class="staticText">Make Secure Exchanges via CryptoWallet!</div>
 
                 </div>
@@ -113,27 +109,17 @@ document.querySelector('.send').addEventListener('click', function () {
                 </form>
             </div>
         `;
-    const bootstrapLink = document.createElement('link');
-    bootstrapLink.rel = 'stylesheet';
-    bootstrapLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css';
-    document.head.appendChild(bootstrapLink);
+    showImage();
 
-    const styleCssLink = document.createElement('link');
-    styleCssLink.rel = 'stylesheet';
-    styleCssLink.href = "{% static 'crypto-currency/css/style.css' %}";
-    document.head.appendChild(styleCssLink);
-
-    const sendCssLink = document.createElement('link');
-    sendCssLink.rel = 'stylesheet';
-    sendCssLink.href = "{% static 'crypto-currency/css/send.css' %}";
-    document.head.appendChild(sendCssLink);
 });
 
 document.querySelector('.buy').addEventListener('click', function () {
+    loadBootstrap();
+    loadSendStyles();
     const tenantContent = document.querySelector('.Tenant').outerHTML;
     document.getElementById('mainContent').innerHTML = `
       <div class="Tenant">
-                    <img src="{% static 'crypto-currency/images/exchange.webp' %}" style="width: 80px;">
+                    <img src="{% static 'crypto-currency/images/exchange.webp' %}" style="width: 80px;" id="exchangeImage">
                     <div class="staticText">Make Secure Exchanges via CryptoWallet!</div>
 
                 </div>
@@ -174,24 +160,17 @@ document.querySelector('.buy').addEventListener('click', function () {
                 </form>
             </div>
         `;
-
-    const bootstrapLink = document.createElement('link');
-    bootstrapLink.rel = 'stylesheet';
-    bootstrapLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css';
-    document.head.appendChild(bootstrapLink);
-
-    const sendCssLink = document.createElement('link');
-    sendCssLink.rel = 'stylesheet';
-    sendCssLink.href = 'css/send.css';
-    document.head.appendChild(sendCssLink);
+    showImage();
 });
 
 
 document.querySelector('.receive').addEventListener('click', function () {
+    loadBootstrap();
+    loadSendStyles();
     const tenantContent = document.querySelector('.Tenant').outerHTML;
     document.getElementById('mainContent').innerHTML = `
       <div class="Tenant">
-                    <img src="{% static 'crypto-currency/images/exchange.webp' %}" style="width: 80px;">
+                    <img src="{% static 'crypto-currency/images/exchange.webp' %}" style="width: 80px;" id="exchangeImage">
                     <div class="staticText">Make Secure Exchanges via CryptoWallet!</div>
 
                 </div>
@@ -248,15 +227,8 @@ document.querySelector('.receive').addEventListener('click', function () {
                   </div>
                 </div>
             `;
-    const bootstrapLink = document.createElement('link');
-    bootstrapLink.rel = 'stylesheet';
-    bootstrapLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css';
-    document.head.appendChild(bootstrapLink);
+    showImage();
 
-    const sendCssLink = document.createElement('link');
-    sendCssLink.rel = 'stylesheet';
-    sendCssLink.href = 'css/send.css';
-    document.head.appendChild(sendCssLink);
 
     const input = document.getElementById('shareLink');
 
@@ -313,6 +285,7 @@ function Canceling(event) {
 
 function Sending(event) {
     event.preventDefault()
+    loadReceiptStyles()
 
     const isConfirmed = confirm("Confirm transaction.");
 
@@ -325,23 +298,14 @@ function Sending(event) {
             ${tenantContent}
              ${SendContent}
             <div class="card" style="width:400px">
-                <div class="card-title"> <img src="{% static 'crypto-currency/images/success.webp' %}"> </div>
+                <div class="card-title"> <img src="{% static 'crypto-currency/images/success.webp' %}" id="successImage"> </div>
                 <div class="card-body">
                     <p class="card-text">Transaction was successful!</p>
                     <a href="index.html" class="btn btn-primary">View Balance</a>
                 </div>
             </div>
         `;
-
-    const bootstrapLink = document.createElement('link');
-    bootstrapLink.rel = 'stylesheet';
-    bootstrapLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css';
-    document.head.appendChild(bootstrapLink);
-
-    const receiptCssLink = document.createElement('link');
-    receiptCssLink.rel = 'stylesheet';
-    receiptCssLink.href = 'css/receipt.css';
-    document.head.appendChild(receiptCssLink);
+    showImage();
 };
 
 // function Sending(event) {
@@ -358,7 +322,7 @@ function Sending(event) {
 //             ${tenantContent}
 //              ${SendContent}
 //             <div class="card" style="width:400px">
-//                 <div class="card-title"> <img src="{% static 'crypto-currency/images/success.webp' %}"> </div>
+//                 <div class="card-title"> <img src="{% static 'crypto-currency/images/success.webp' %}" id="successImage"> </div>
 //                 <div class="card-body">
 //                     <p class="card-text">Transaction was successful!</p>
 //                     <a href="index.html" class="btn btn-primary">View Balance</a>
@@ -393,18 +357,20 @@ function Canceling(event) {
 
 
 document.querySelector('.transaction').addEventListener('click', function () {
+    loadBootstrap();
+    loadSendStyles();
     const tenantContent = document.querySelector('.Tenant').outerHTML;
     document.getElementById('mainContent').innerHTML = `
        <div class="Trans">
         <div class="Tenant">
-            <img src="images/exchange.webp" style="width: 80px;">
+            <img src="images/exchange.webp" style="width: 80px;" id="exchangeImage">
             <div class="staticText">Make Secure Exchanges via CryptoWallet!</div>
         </div>
       
         <div class="charts">
         <div class="card bit-chart chart" style="width:210px; height: 155px;">
         <div class="btc">
-        <img src="{% static 'crypto-currency/images/Bitcoin1.png' %}" style="width: 30px; height:20px;">
+        <img src="{% static 'crypto-currency/images/Bitcoin1.png' %}" style="width: 30px; height:20px;" id="bitcoinImage">
         <p>BTC Price history</p>
         <p id="weekly-rates"> </p>
         </div>
@@ -412,7 +378,7 @@ document.querySelector('.transaction').addEventListener('click', function () {
         </div>
         <div class="card ether-chart chart" style="width:210px; height: 155px;">
         <div class="btc">
-        <img src="images/{% static 'crypto-currency/images/Ethereum1.png' %}" style="width: 10px; height:20px;">
+        <img src="images/{% static 'crypto-currency/images/Ethereum1.png' %}" style="width: 10px; height:20px;" id="ethereumImage">
         <p>Ether Price <br> history</p>
         <p id="week-rates"> </p>
         </div>
@@ -422,7 +388,7 @@ document.querySelector('.transaction').addEventListener('click', function () {
        
         <div class="card tron-chart chart" style="width:210px; height:190px;">
         <div class="btc">
-        <img src="{% static 'crypto-currency/images/Tron.webp' %}" style="width: 15px; height:20px;">
+        <img src="{% static 'crypto-currency/images/Tron.webp' %}" style="width: 15px; height:20px;" id="tronImage">
         <p>Tron Price <br>history</p>
         <p id="week-rate"> </p>
          </div>
@@ -430,7 +396,7 @@ document.querySelector('.transaction').addEventListener('click', function () {
         </div>
         <div class="card usdt-chart chart" style="width:210px; height:190px;">
         <div class="btc">
-        <img src="{% static 'crypto-currency/images/USDT1.png' %}" style="width: 15px; height:20px;">
+        <img src="{% static 'crypto-currency/images/USDT1.png' %}" style="width: 15px; height:20px;" id="usdtImage">
         <p>USDT Price <br>history</p>
         <p id="week-rated"> </p>
          </div>
@@ -491,16 +457,8 @@ document.querySelector('.transaction').addEventListener('click', function () {
     </div>
     `;
 
-    const bootstrapLink = document.createElement('link');
-    bootstrapLink.rel = 'stylesheet';
-    bootstrapLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css';
-    document.head.appendChild(bootstrapLink);
 
-    const sendCssLink = document.createElement('link');
-    sendCssLink.rel = 'stylesheet';
-    sendCssLink.href = 'css/send.css';
-    document.head.appendChild(sendCssLink);
-
+    showImage();
 
     const statuses = document.querySelectorAll('.status');
     statuses.forEach(status => {
