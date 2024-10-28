@@ -4,10 +4,10 @@
  {% block title %}Register | Crypto wallet{% endblock title %}
 {% block form %}
 
-{% block form_title %}Register{% endblock form_title %}
+{% block formtitle %}Register{% endblock formtitle %}
 <form method="post">
 {% csrf_token %}
-{{register_form}}
+{{register_form.as_div}}
 
 <div>
 <button type="submit" class="btn-1">Register</button>

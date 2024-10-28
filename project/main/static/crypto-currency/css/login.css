@@ -11,14 +11,14 @@ body {
 .container {
   display: flex;
   position: relative;
-  height: 100vh;
 }
-.side-image img {
+
+/* .side-image img {
   max-width: 600px;
   height: 100vh;
   object-fit: cover;
   object-position: right;
-}
+} */
 
 .login-form {
   display: flex;
