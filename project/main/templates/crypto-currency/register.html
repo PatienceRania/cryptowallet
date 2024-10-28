@@ -1,0 +1,15 @@
+{% extends "crypto-currency/login.html" %} {% load static %} {% block title %}
+Register | Crypto Wallet {% endblock title %} {% block form %}
+<form method="post">
+  {% csrf_token %} {{register_form}}
+
+  <div>
+    <button type="submit" class="btn-1">Register</button>
+  </div>
+</form>
+
+{% block loginpara %} Already have an account?
+<a href="{% url 'login' %}">Login</a>
+{% endblock loginpara %} {% if messages %} {% for message in messages %}
+<p>{{message}}</p>
+{% endfor %} {% endif %} {% endblock form %}
