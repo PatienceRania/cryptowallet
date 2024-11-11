@@ -64,3 +64,36 @@ def register_view(request, *args, **kwargs):
         "register_form":form,
     }
     return render(request, 'crypto-currency/register.html', context)
+
+
+from django.http import JsonResponse
+import json
+
+@login_required
+def send_transaction(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        
+        # Extract and validate data from JSON
+        asset_type = data.get('asset_type')
+        account_number = data.get('account_number')
+        account_name = data.get('account_name')
+        amount_usd = data.get('amount_usd')
+        amount_ugx = data.get('amount_ugx')
+
+        try:
+            # Create Transaction object
+            transaction = Transaction(
+                user=request.user,
+                asset_type=AssetType.objects.get(name=asset_type),  # Assumes asset types are identified by name
+                transaction_type='TRANSFER',
+                amount=amount_usd,
+                recipient_account_number=account_number
+            )
+            transaction.save()
+            return JsonResponse({'success': True})
+        
+        except Exception as e:
+            return JsonResponse({'success': False, 'error': str(e)})
+
+    return JsonResponse({'success': False, 'error': 'Invalid request method'})

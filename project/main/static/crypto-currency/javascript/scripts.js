@@ -93,7 +93,7 @@ document.querySelector('.send').addEventListener('click', function () {
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text">Receiver Details</span>
-                        <input type="number" class="form-control" placeholder="Account Number">
+                        <input type="text" class="form-control" placeholder="Account Number">
                         <input type="text" class="form-control" placeholder="Account Name">
                     </div>
                     <div class="input-group mb-3">
@@ -112,6 +112,42 @@ document.querySelector('.send').addEventListener('click', function () {
     showImage();
 
 });
+// function Sending(event) {
+//     event.preventDefault();
+
+//     // Collect form data
+//     const assetType = document.querySelector('.form-select').value;
+//     const accountNumber = document.querySelector('.form-control[placeholder="Account Number"]').value;
+//     const accountName = document.querySelector('.form-control[placeholder="Account Name"]').value;
+//     const amountUSD = document.querySelector('.form-control[placeholder="Amount in USD"]').value;
+//     const amountUGX = document.querySelector('.form-control[placeholder="Amount in UGX"]').value;
+
+//     // Send data to Django view
+//     fetch('/send/', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//             'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+//         },
+//         body: JSON.stringify({
+//             asset_type: assetType,
+//             account_number: accountNumber,
+//             account_name: accountName,
+//             amount_usd: amountUSD,
+//             amount_ugx: amountUGX
+//         })
+//     })
+//         .then(response => response.json())
+//         .then(data => {
+//             if (data.success) {
+//                 alert("Transaction successful!");
+//             } else {
+//                 alert("Transaction failed: " + data.error);
+//             }
+//         })
+//         .catch(error => console.error('Error:', error));
+// }
+
 
 document.querySelector('.buy').addEventListener('click', function () {
     loadBootstrap();
@@ -144,7 +180,7 @@ document.querySelector('.buy').addEventListener('click', function () {
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text">Account Details</span>
-                        <input type="number" class="form-control" placeholder="Account Number">
+                        <input type="text" class="form-control" placeholder="Account Number">
                         <input type="text" class="form-control" placeholder="Account Name">
                     </div>
                     <div class="input-group mb-3">
@@ -195,7 +231,7 @@ document.querySelector('.receive').addEventListener('click', function () {
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text">Share link to receive Assets</span>
-                        <input type="text" class="form-control" id="shareLink" placeholder="Enter Address to generate link">
+                        <input type="number" class="form-control" id="shareLink" placeholder="Enter Address to generate link">
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text">Receive by Qr Code </span>
@@ -567,51 +603,51 @@ document.querySelector('.transaction').addEventListener('click', function () {
 });
 
 
-const bitcoinAddress = '1PuJjnF476W3zXfVYmJfGnouzFDAXakkL4';
-const ethereumAddress = '0x4838b106fce9647bdf1e7877bf73ce8b0bad5f97';
+// const bitcoinAddress = '1PuJjnF476W3zXfVYmJfGnouzFDAXakkL4';
+// const ethereumAddress = '0x4838b106fce9647bdf1e7877bf73ce8b0bad5f97';
 
-const bitcoinBalanceUrl = `https://blockchain.info/balance?active=${bitcoinAddress}`;
-const ethereumBalanceUrl = `https://api.blockcypher.com/v1/eth/main/addrs/${ethereumAddress}/balance`;
+// const bitcoinBalanceUrl = `https://blockchain.info/balance?active=${bitcoinAddress}`;
+// const ethereumBalanceUrl = `https://api.blockcypher.com/v1/eth/main/addrs/${ethereumAddress}/balance`;
 
-function fetchBitcoinBalance() {
-    fetch(bitcoinBalanceUrl)
-        .then(response => {
-            if (!response.ok) throw new Error("Network response was not ok");
-            return response.json();
-        })
-        .then(data => {
-            console.log("Bitcoin Balance Data:", data);
-            if (data[bitcoinAddress]) {
-                const balanceBTC = data[bitcoinAddress].final_balance / 100000000;
-                const balanceUSD = balanceBTC * 20000;
-                const balanceUGX = balanceUSD * 3700;
+// function fetchBitcoinBalance() {
+//     fetch(bitcoinBalanceUrl)
+//         .then(response => {
+//             if (!response.ok) throw new Error("Network response was not ok");
+//             return response.json();
+//         })
+//         .then(data => {
+//             console.log("Bitcoin Balance Data:", data);
+//             if (data[bitcoinAddress]) {
+//                 const balanceBTC = data[bitcoinAddress].final_balance / 100000000;
+//                 const balanceUSD = balanceBTC * 20000;
+//                 const balanceUGX = balanceUSD * 3700;
 
-                document.querySelector(".balance").textContent = `${balanceUSD.toLocaleString()}`;
-                document.querySelector(".balances").textContent = `${balanceUGX.toLocaleString()}`;
-            } else {
-                console.error("Bitcoin address not found in response");
-            }
-        })
-        .catch(error => console.error('Error fetching Bitcoin balance:', error));
-}
+//                 document.querySelector(".balance").textContent = `${balanceUSD.toLocaleString()}`;
+//                 document.querySelector(".balances").textContent = `${balanceUGX.toLocaleString()}`;
+//             } else {
+//                 console.error("Bitcoin address not found in response");
+//             }
+//         })
+//         .catch(error => console.error('Error fetching Bitcoin balance:', error));
+// }
 
-function fetchEthereumBalance() {
-    fetch(ethereumBalanceUrl)
-        .then(response => {
-            if (!response.ok) throw new Error("Network response was not ok");
-            return response.json();
-        })
-        .then(data => {
-            console.log("Ethereum Balance Data:", data);
-            const balanceETH = data.balance / 1e18; // Convert wei to ETH
-            const balanceUSD = balanceETH * 1600; // Example conversion rate
-            const balanceUGX = balanceUSD * 3700; // Example conversion rate
+// function fetchEthereumBalance() {
+//     fetch(ethereumBalanceUrl)
+//         .then(response => {
+//             if (!response.ok) throw new Error("Network response was not ok");
+//             return response.json();
+//         })
+//         .then(data => {
+//             console.log("Ethereum Balance Data:", data);
+//             const balanceETH = data.balance / 1e18; // Convert wei to ETH
+//             const balanceUSD = balanceETH * 1600; // Example conversion rate
+//             const balanceUGX = balanceUSD * 3700; // Example conversion rate
 
-            document.querySelector(".bal").textContent = `${balanceUSD.toLocaleString()} `;
-            document.querySelector(".bals").textContent = `${balanceUGX.toLocaleString()} `;
-        })
-        .catch(error => console.error('Error fetching Ethereum balance:', error));
-}
+//             document.querySelector(".bal").textContent = `${balanceUSD.toLocaleString()} `;
+//             document.querySelector(".bals").textContent = `${balanceUGX.toLocaleString()} `;
+//         })
+//         .catch(error => console.error('Error fetching Ethereum balance:', error));
+// }
 
-fetchBitcoinBalance();
-fetchEthereumBalance();
+// fetchBitcoinBalance();
+// fetchEthereumBalance();

@@ -2,12 +2,36 @@
 {% extends "crypto-currency/login.html" %}
 {% load static %}
  {% block title %}Register | Crypto wallet{% endblock title %}
+   {% block styles %}<style> 
+
+    form{
+      padding: 5px 10px;
+    }
+    form input{
+      min-height: 28px;
+      color: grey;
+     font-size: 0.94em;
+     padding: 1px;
+     border-radius: 5px;
+     padding-left: 22px;
+      border-bottom: 2.5px solid #ccc;
+     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4) inset
+     float: right;
+     width: 85%;
+     margin-bottom: 10px;
+    }
+    .helptext{
+      display: none;
+    }
+
+   </style>{% endblock styles %}
+
 {% block form %}
 
 {% block formtitle %}Register{% endblock formtitle %}
 <form method="post">
 {% csrf_token %}
-{{register_form.as_div}}
+{{register_form}}
 
 <div>
 <button type="submit" class="btn-1">Register</button>

@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %} Login | Crypto Wallet {% endblock title %}</title>
+    {% block styles %}{% endblock styles %}
     <link
       rel="stylesheet"
       href="{% static 'crypto-currency/css/login.css' %}"
@@ -14,7 +15,7 @@
   <body>
     <div class="container">
       <div class="side-image">
-        <img style="width:600px; height:600px;" src="{% static 'crypto-currency/images/wallet.png' %}" />
+        <img style="width:600px; min-height:600px; max-height: 100vh;" src="{% static 'crypto-currency/images/wallet.png' %}" />
       </div>
       <div class="login-form">
         <div class="title">
@@ -26,7 +27,7 @@
           {% csrf_token %}
           <div>
             <div class="user-name">
-              <label for="User Name ">User Name</label>
+              <label for="User Name ">Username</label>
               <span>
                 <img src="{% static 'crypto-currency/images/email.png' %}" />
               </span>
